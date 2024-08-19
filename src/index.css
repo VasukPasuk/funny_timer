@@ -5,3 +5,7 @@
 body {
   @apply min-h-dvh w-dvw overflow-x-hidden
 }
+
+#root {
+  @apply min-h-dvh w-dvw grid auto-cols-[100%] auto-rows-[100%]
+}
