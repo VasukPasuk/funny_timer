@@ -50,9 +50,13 @@ function App() {
     return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   };
 
+  useEffect(() => {
+    document.documentElement.setAttribute("class", theme)
+  }, [theme]);
+
   return (
     <>
-      <main className={"max-h-dvh flex flex-col justify-center items-center"}>
+      <main className={"max-h-dvh flex dark:bg-black flex-col justify-center items-center"}>
         <div className={"flex flex-col justify-center items-center gap-8"}>
           <div>
             <Typography variant={"h1"}>
