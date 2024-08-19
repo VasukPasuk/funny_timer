@@ -61,7 +61,7 @@ function App() {
           </div>
           <div className={"flex gap-4"}>
             {BaseTimeValues1.map((value) => (
-              <Button onClick={() => setCurrentTime(prev => (prev - value) < 0 ? prev : prev - value)} key={value} variant={"contained"} color={ThemeDictionary[theme]}>{'-' + formatTime(value)}</Button>
+              <Button onClick={() => setCurrentTime(prev => (prev - value) < 0 ? 0 : prev - value)} key={value} variant={"contained"} color={ThemeDictionary[theme]}>{'-' + formatTime(value)}</Button>
             ))}
             {BaseTimeValues2.map((value) => (
               <Button onClick={() => setCurrentTime(prev => prev + value)} key={value} variant={"contained"} color={ThemeDictionary[theme]}>{formatTime(value)}</Button>
