@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply min-h-dvh w-dvw overflow-x-hidden
+  @apply min-h-dvh w-dvw overflow-x-hidden overflow-hidden
 }
 
 #root {
