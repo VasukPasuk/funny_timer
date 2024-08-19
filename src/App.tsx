@@ -56,10 +56,10 @@ function App() {
 
   return (
     <>
-      <main className={"max-h-dvh flex dark:bg-black flex-col justify-center items-center"}>
-        <div className={"flex flex-col justify-center items-center gap-8"}>
+      <main className={"max-h-dvh flex dark:bg-gray-950 flex-col justify-center items-center duration-700 transition-colors"}>
+        <div className={"flex dark:bg-gray-500/15 px-8 py-16 rounded-lg backdrop-blur-3xl flex-col justify-center items-center gap-8"}>
           <div>
-            <Typography variant={"h1"}>
+            <Typography variant={"h1"} className={"dark:text-blue-200"}>
               {formatTime(currentTime)}
             </Typography>
           </div>
@@ -75,7 +75,7 @@ function App() {
             <Button variant={"contained"} onClick={() => setActiveTimer(() => !!currentTime)}>
               Почати
             </Button>
-            <Button variant={"outlined"} onClick={() => setActiveTimer(false)}>
+            <Button variant={"contained"} color={"error"} onClick={() => setActiveTimer(false)}>
               Зупинити
             </Button>
           </div>
