@@ -4,7 +4,6 @@ import { MdAddTask } from "react-icons/md";
 import {useEffect, useRef, useState} from "react";
 
 const actions = [
-  { icon: <MdAddTask size={20} />, name: 'Створити' },
   { icon: <MdNightlight size={20} />, name: 'Темна тема', theme: "dark" },
   { icon: <MdSunny size={20} />, name: 'Світла тема', theme: "light" },
 ];
