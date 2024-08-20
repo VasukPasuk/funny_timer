@@ -58,7 +58,7 @@ function App() {
       <main className={"max-h-dvh flex dark:bg-gray-950 flex-col justify-center items-center duration-700 transition-colors"}>
         <div className={"flex dark:bg-gray-500/15 px-8 py-16 rounded-lg backdrop-blur-3xl flex-col justify-center items-center gap-8"}>
           <div>
-            <Typography variant={"h1"} className={"dark:text-blue-200"}>
+            <Typography className={"dark:text-blue-200 text-9xl"}>
               {formatTime(currentTime)}
             </Typography>
           </div>
