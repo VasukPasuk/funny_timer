@@ -24,7 +24,7 @@ const BaseTimeValues2 = [30, 60, 180, 300];
 
 function App() {
   const [activeTimer, setActiveTimer] = useState<boolean>(false);
-  const [currentTime, setCurrentTime] = useState<number>(0);
+  const [currentTime, setCurrentTime] = useState<number>(1);
   const [theme, setTheme] = useState<ThemeUnion>("light");
   const inited = useRef<boolean>(false);
   const ref = useRef<HTMLAudioElement | null>(null);
