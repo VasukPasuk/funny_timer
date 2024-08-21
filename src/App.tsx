@@ -74,6 +74,9 @@ function App() {
     document.documentElement.setAttribute("class", theme);
   }, [theme]);
 
+
+
+
   const formattedTime = formatTime(currentTime).split(":");
 
   return (
