@@ -26,6 +26,7 @@ function App() {
   const [activeTimer, setActiveTimer] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [theme, setTheme] = useState<ThemeUnion>("light");
+  const inited = useRef<boolean>(false);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ function App() {
       };
     } else if (currentTime <= 0) {
       setActiveTimer(false);
-      ref.current.play()
+      if (inited) ref.current.play()
     }
   }, [activeTimer, currentTime]);
 
@@ -67,7 +68,10 @@ function App() {
               <Button onClick={() => setCurrentTime(prev => (prev - value) < 0 ? 0 : prev - value)} key={value} variant={"contained"} color={ThemeDictionary[theme]}>{'-' + formatTime(value)}</Button>
             ))}
             {BaseTimeValues2.map((value) => (
-              <Button onClick={() => setCurrentTime(prev => prev + value)} key={value} variant={"contained"} color={ThemeDictionary[theme]}>{formatTime(value)}</Button>
+              <Button onClick={() => {
+                setCurrentTime(prev => prev + value)
+                inited.current = false
+              }} key={value} variant={"contained"} color={ThemeDictionary[theme]}>{formatTime(value)}</Button>
             ))}
           </div>
           <div className={"flex justify-center items-center gap-6"}>
