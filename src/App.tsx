@@ -49,7 +49,7 @@ function App() {
     return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   };
 
-  const handleInputChange = (event: React.FormEvent<HTMLDivElement>, isMinutes: boolean) => {
+  const handleInputChange = (event: React.FormEvent<HTMLSpanElement>, isMinutes: boolean) => {
     let value = event.currentTarget.innerText;
 
     if (!/^\d*$/.test(value)) {
